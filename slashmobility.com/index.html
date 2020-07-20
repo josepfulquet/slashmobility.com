@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SlashMobility Fullstack Test</title>
+    <meta name="description" content="SlashMobility Fullstack Test">
+    <meta name="author" content="Josep Fulquet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+    <div id="body-content">
+        <div class="bar bar-topbar">
+            <a href="." class="logo"><img src="img/img_logo_slashmobility_white.png" alt="img_logo_slashmobility" width="168" height="28"></a>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="box-image"><img src="img/food-chocolate-hand-holding.jpg" alt="food-chocolate-hand-holding" width="150" height="200"></div>
+
+                <div class="box-title">
+                    Nutela
+                </div>
+
+                <div class="box-body">
+                    <p>10 €</p>
+                </div>
+
+                <div class="box-footer">
+                    <a href="#" class="button-buy">BUY</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="bar bar-bottombar">
+            <p>&copy; Slashmobility 2020</p>
+        </div>
+    </footer><!-- The Modal -->
+
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+
+        <div class="modal-content">
+            <form class="modal-form" id="formSignin">
+                <div class="modal-header">
+                    <p>Do you wanna buy it?</p>
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" name="username" placeholder="Username" id="signinUsername"> <input type="text" name="password" placeholder="Password" id="signinPassword">
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-grey" id="btnCancel">CANCEL</button> <button class="btn btn-black" id="btnConfirm">CONFIRM</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/libs/cookies.js"></script> 
+    <script src="js/dist/user.js"></script> 
+    <script>
+// Here I put all the UI.   
+    window.onload = function(){
+      
+	    const boxbuttons = document.querySelectorAll(".button-buy");
+
+	    for (let i = 0; i < boxbuttons.length; i++) {
+	      boxbuttons[i].addEventListener("click", function() {
+	        if (getCookie("sm_user_id") !== ""){
+	            alert("bought!")
+	        }
+	        else{
+	            document.getElementById("myModal").style.display = "block" ;
+	            signin();
+	        }
+	        
+	      });
+	    } 
+
+	    document.getElementById("btnCancel").addEventListener("click", function() {
+	      document.getElementById("myModal").style.display = "none" ;
+	    });
+
+    }
+
+    function signin(){
+	    let apiUrl = "http://localhost/api.slashmobility.com/";
+	    let _user;
+	
+	    try{
+		    _user = new User({'env':'dev','baseHref':apiUrl+'v1/signin.php','lang':'en'});
+	    }
+	    catch(e){
+		    console.log(e);
+	    }
+
+
+	    var theForm = document.getElementById("formSignin");
+	    theForm.addEventListener("submit", function(e){
+			e.preventDefault();
+			response = _user.signin(document.getElementById("signinUsername").value, document.getElementById("signinPassword").value);
+			response.then(res => {
+				console.log(res.data);
+				if (res.data.status === "Accepted"){
+					setCookie("sm_user_id", res.data.message.user_id, 1)
+					document.getElementById("myModal").style.display = "none" ;
+					alert("bought!")
+				}
+				else if (res.data.status === "Failed"){
+					document.getElementById("myModal").style.display = "none" ;
+					alert("Invalid data. Try again")
+				}
+			});
+		});
+
+    }
+
+
+    </script>
+</body>
+</html>
